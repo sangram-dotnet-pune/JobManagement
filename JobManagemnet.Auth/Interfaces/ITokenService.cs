@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JobManagemnet.Auth.Interfaces
 {
-    internal interface ITokenService
+    public interface ITokenService
     {
         string GenerateToken(long userId,string email, string role);
     }
