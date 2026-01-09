@@ -12,7 +12,7 @@ namespace JobManagement.Repositories
         Task<IEnumerable<job>> GetAllAsync();
         Task<job?> GetByIdAsync(long id);
         Task<IEnumerable<job>> GetOpenJobsAsync();
-       // Task<IEnumerable<job>> GetJobsByCreatorAsync(long creatorId);
+        Task<IEnumerable<job>> GetJobsByCreatorAsync(long creatorId);
         Task AddAsync(job job);
         Task UpdateAsync(job job);
     }
