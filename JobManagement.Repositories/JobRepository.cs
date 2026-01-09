@@ -40,12 +40,12 @@ namespace JobManagement.Repositories
                 .ToListAsync();
         }
 
-        //public async Task<IEnumerable<job>> GetJobsByCreatorAsync(long creatorId)
-        //{
-        //    return await _context.jobs
-        //        .Where(j => j.created_by == creatorId)
-        //        .ToListAsync();
-        //}
+        public async Task<IEnumerable<job>> GetJobsByCreatorAsync(long creatorId)
+        {
+            return await _context.jobs
+                .Where(j => j.created_by == creatorId)
+                .ToListAsync();
+        }
 
         public async Task AddAsync(job job)
         {
