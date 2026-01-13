@@ -1,5 +1,6 @@
 using JobManagement.Applicant.Data.Context;
 using JobManagement.Repositories;
+using JobManagement.Services;
 using JobManagemnet.Auth;
 using JobManagemnet.Auth.Interfaces;
 using JobManagemnet.Auth.models;
@@ -22,6 +23,8 @@ builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 builder.Services.AddScoped<IApplicantRepository,ApplicantRepository>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
+
+
 
 builder.Services.Configure<JwtSettings>(
     builder.Configuration.GetSection("JwtSettings")
